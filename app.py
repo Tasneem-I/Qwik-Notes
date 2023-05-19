@@ -69,6 +69,8 @@ def login():
 
 @app.route("/dashboard", methods= ["GET", "POST"])
 def dash():
+    user = current_user()
+    name = user.use
     return render_template("dashboard.html")
 
 @app.route("/add", methods=["GET", "POST"])
